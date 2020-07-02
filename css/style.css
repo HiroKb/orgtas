@@ -1,0 +1,1494 @@
+/* リセットCSS */
+*{
+  box-sizing: border-box;
+  font-family: 'M PLUS 1p', sans-serif;
+  color: #666;
+}
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+    background-color: rgb(251, 251, 251);
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+} 
+img{
+  object-fit: cover;
+}
+
+
+
+
+/* フッター固定用css */
+html{
+  height: 100%;
+}
+body{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex: 1;
+}
+
+.site-width{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+/* ヘッダー */
+header{
+  min-height: 72px;
+  background: #666;
+}
+header .site-width{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+header a{
+  color: white;
+}
+.header-left a{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.header-left img{
+  height: 52px;
+  filter: drop-shadow(0px 0px 0.3px #666);
+}
+.header-left span{
+  margin-left: 8px;
+  font-size: 44px;
+  color: white;
+  text-shadow: 0px 0px 1px #666;
+}
+
+.header-right ul{
+  margin-top: 38px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-right li{
+  margin-left: 28px;
+}
+.header-right a{
+  font-size: 28px;
+  text-shadow: 0px 0px 1px #666;
+}
+/* フッター */
+footer{
+  height: 70px;
+  display: flex;
+  align-items: center;
+  background: #666;
+}
+footer p {
+  color: white;
+}
+footer a{
+  color: white;
+}
+
+
+
+/* フォーム */
+.like-memo-container{
+  margin: 104px auto;
+  padding: 56px 0 32px;
+  width: 70%;
+  border-radius: 0 10px 10px 0;
+  border-left: 30px #666 solid;
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+}
+.like-memo-container h2{
+  font-size: 32px;
+  text-align: center;
+}
+.like-memo-container form{
+  margin: 0 auto;
+  width: 62%;
+}
+.fundamental-err-msg-wrap{
+  margin-bottom: 32px;
+}
+.fundamental-err-msg-wrap p{
+  font-size: 14px;
+  color: #E38692;
+}
+.like-memo-container label{
+  display: inline-block;
+  width: 28%;
+  margin-bottom: 4px;
+}
+.like-memo-container label.color-label{
+  width: 100%;
+}
+.like-memo-container .err-msg-wrap{
+  display: inline-block;
+  width: 67%;
+  text-align: right;
+}
+.err-msg-wrap .err-msg{
+  font-size: 14px;
+  color: #E38692;
+}
+.like-memo-container label:not(:first-of-type){
+  margin-top: 32px;
+}
+.like-memo-container input[type='text'],
+.like-memo-container input[type='password'],
+.like-memo-container textarea{
+  display: block;
+  height: 40px;
+  width: 100%;
+  padding: 0 8px;
+  font-size: 18px;
+  border: solid #666 1px;
+  border-radius: 4px;
+  outline: none;
+}
+.like-memo-container textarea{
+  height: 100px;
+}
+.like-memo-container input[type='color']{
+  display: block;
+  margin-top: -16px;
+  height: 64px;
+  width: 120px;
+  border-radius: 4px;
+  outline: none;
+}
+input::placeholder,
+textarea::placeholder{
+  color: rgb(187, 187, 187);
+}
+.like-memo-container button{
+  margin: 32px auto;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+  border-radius: 6px;
+  font-size: 24px;
+}
+.like-memo-container button:hover{
+  opacity: 0.7;
+}
+input[type='file']{
+  display: none;
+}
+.form-img-container img{
+  margin: 0 auto;
+  display: block;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 150px;
+}
+form .file-btn{
+  display: block;
+  margin: 12px auto 32px;
+  padding: 8px 0;
+  width: 50%;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+  border: none;
+  border-radius: 6px;
+  font-size: 24px;
+  outline: none;
+}
+form .file-btn:hover{
+  opacity: 0.7;
+}
+
+
+/* index */
+.index main h2{
+  margin: 216px 0 144px 0;
+  text-align: center;
+  font-size: 48px;
+  color: #666;
+}
+.index main .btn-wrap{
+  margin: 0 auto;
+  width: 620px;
+  display: flex;
+  justify-content: space-between;
+}
+.index main .btn-wrap a{
+  display: block;
+  padding: 8px 16px;
+  border-radius: 0 6px 6px 0;
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+  font-size: 28px;
+  color: #666;
+}
+.index main .btn-wrap a:hover{
+  opacity: 0.7;
+}
+.index main a.login-btn{
+  border-left: 15px #68CFC3 solid;
+}
+.index main a.signup-btn{
+  border-left: 15px #FBE481 solid;
+}
+.index main a.trial-btn{
+  border-left: 15px #E38692 solid;
+}
+
+/* siguup */
+.twitter-auth{
+  margin: 32px auto;
+  padding: 8px;
+  width: 62%;
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+  border-radius: 6px;
+}
+.twitter-auth i{
+  color: white;
+}
+.or-wrap{
+  margin: 0 auto;
+  width: 88%;
+}
+.like-memo-container .or-wrap p{
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+.like-memo-container .or-wrap p::before,
+.like-memo-container .or-wrap p::after{
+  content: "";
+  flex-grow: 1;
+  height: 1px;
+  background: #666;
+  margin: 0 8px;
+}
+
+/* login */
+.login #pass{
+  margin-bottom: 10px;
+}
+.login #keep{
+  display: inline-block;
+  width: 14px;
+}
+.login #keep~label{
+  width:60%; 
+  margin: 0;
+}
+
+/* mypage */
+.mypage .site-width{
+  display: flex;
+  justify-content: space-between;
+}
+.mypage .left-container{
+  width: 56%;
+  margin: 64px 0;
+  /* background: #68CFC3; */
+}
+.mypage .general-group-wrap{
+  margin-top: 64px;
+}
+.mypage h2{
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  font-size: 32px;
+  border-bottom: 1px dashed #666;
+}
+.group-list li:not(:first-of-type){
+  margin-top: 16px;
+}
+.mypage .group-list a{
+  display: flex;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  padding-left: 8px;
+  font-size: 28px;
+  border-left: 15px solid #68CFC3;
+  border-radius: 0 10px 10px 0;
+  background-color:white; 
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+}
+.mypage .group-list img{
+  height: 56px;
+  width: 56px;
+  border-radius: 100px;
+
+}
+.mypage .group-list li p{
+  margin-left: 4px;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+  margin: 12px auto 0;
+}
+.pagination a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 24px;
+  color: white;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+}
+.pagination li:not(:first-of-type){
+  margin-left: 16px;
+}
+.active-pagination{
+  opacity: 0.7;
+}
+.mypage .right-container{
+  width: 35%;
+  margin: 112px 0 64px;
+}
+
+.mypage-menu{
+  padding: 0 20px;
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+  background: white;
+  border-radius: 0 10px 10px 0;
+}
+.mypage-menu li:not(:last-of-type){
+  border-bottom: 1px dashed #666;
+}
+.mypage-menu a{
+  display: block;
+  padding: 28px 0;
+  font-size: 28px;
+}
+
+/* profile */
+.profile .like-memo-container{
+  position: relative;
+}
+.profile .fa-cog{
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  font-size: 48px;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+}
+.profile main img{
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 150px;
+}
+.profile .username{
+  margin-top: 12px;
+  text-align: center;
+  font-size: 32px;
+}
+.profile .introduce{
+display: block;
+margin: 32px auto 24px;
+width: 80%;
+word-break: break-all;
+font-size: 24px;
+}
+
+
+/* profileEdit */
+
+
+/* emailEdit */
+.emailEdit .current-email{
+  margin: 4px 0 32px;
+  font-size: 24px;
+}
+
+
+/* myTaskList・group・groupTaskList・taskList*/
+.task-menu-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom:  16px;
+  border-bottom: 1px dashed #666;
+}
+
+
+.myTaskList h2,
+.group h2,
+.groupTaskList h2{
+  flex-grow: 100;
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+.taskList  main .site-width{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 68px;
+}
+.taskList .mytask-list-wrap,
+.taskList .grouptask-list-wrap{
+width: 48%;
+}
+.taskList .title-wrap{
+  position: relative;
+  border-bottom: 1px dashed #666;
+}
+.taskList h2{
+  margin-bottom:  16px;
+  font-size: 32px;
+}
+.taskList .title-wrap a{
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 24px;
+}
+.myTaskList .refine,
+.group .refine,
+.groupTaskList .refine{
+  margin-bottom: 4px;
+}
+.add-task-btn,
+.fa-plus,
+.refine button,
+.fa-search,
+.task-menu-wrap .fa-trash-alt,
+.batch-deletion-btn,
+.chat-btn,
+.chat-btn .fa-comments,
+.member-btn,
+.member-btn .fa-users,
+.config-btn,
+.config-btn .fa-cog,
+.pending-btn,
+.pending-btn .fa-user-check,
+.withdrawal-btn,
+.withdrawal-btn .fa-user-times{
+  font-size: 20px;
+  color: white;
+  text-shadow: 0px 0px 1px #666;
+  text-align: center;
+}
+.refine button{
+  padding: 0 6px;
+  border-radius: 4px;
+}
+.batch-deletion-btn,
+.add-task-btn,
+.chat-btn,
+.member-btn,
+.config-btn,
+.pending-btn,
+.withdrawal-btn{
+  display: inline-block;
+  margin: 0 0 4px 20px;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+.chat-btn,
+.member-btn,
+.config-btn,
+.pending-btn{
+  padding: 5px 6px;
+}
+
+.myTaskList .number-of-tasks,
+.group .number-of-tasks,
+.groupTaskList .number-of-tasks,
+.taskList .number-of-tasks{
+  margin-bottom: 8px;
+  text-align: right;
+  font-size: 18px;
+}
+.myTaskList .task-list,
+.group .task-list,
+.groupTaskList .task-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.myTaskList .task-list li,
+.group .task-list li,
+.groupTaskList .task-list li{
+  margin-bottom: 16px;
+  width: 48%;
+}
+.taskList li{
+  margin-bottom: 16px;
+}
+.myTaskList .task-wrap,
+.group .task-wrap,
+.groupTaskList .task-wrap,
+.taskList .task-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+  background-color:white; 
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+}
+.myTaskList .task-title,
+.group .task-title,
+.groupTaskList .task-title,
+.taskList .task-title{
+  margin-left: 4px;
+  max-width: 60%;
+  font-size: 32px;
+  word-wrap: break-word;
+}
+.myTaskList .task-right-inner,
+.group .task-right-inner{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.groupTaskList .task-right-inner,
+.taskList .task-right-inner{
+  margin: 4px 4px 0 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-end;
+}
+.groupTaskList .task-right-inner p{
+  margin-bottom: 4px;
+}
+.myTaskList .deadline-responsible-wrap,
+.group .deadline-responsible-wrap,
+.groupTaskList .deadline-responsible-wrap{
+  margin: 4px 4px 0 0;
+  font-size: 16px;
+  text-align: right;
+}
+.myTaskList .btn-wrap,
+.group .btn-wrap,
+.groupTaskList .btn-wrap{
+  margin: 0 4px 4px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.myTaskList .task-complete-btn,
+.myTaskList .task-delete-btn,
+.group .task-complete-btn,
+.group .task-delete-btn,
+.groupTaskList .task-complete-btn,
+.groupTaskList .task-delete-btn{
+  font-size: 28px;
+  color: #999;
+}
+.myTaskList .no-task-msg,
+.group .no-task-msg,
+.groupTaskList .no-task-msg{
+  margin-top: 32px;
+  font-size: 32px;
+  text-align: center;
+}
+.myTaskList .task-delete-btn,
+.group .task-delete-btn,
+.groupTaskList .task-delete-btn{
+  margin-left: 12px;
+}
+.myTaskList .pagination-wrap,
+.group .pagination-wrap,
+.groupTaskList .pagination-wrap{
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+
+/* myTask・groupTask */
+.myTask .like-memo-container,
+.groupTask .like-memo-container{
+  position: relative;
+}
+.myTask .mytask-complete-btn,
+.myTask .mytask-delete-btn,
+.myTask .back-list-btn,
+.groupTask .grouptask-complete-btn,
+.groupTask .grouptask-delete-btn,
+.groupTask .back-list-btn,
+.groupTask .general-back-list-btn,
+.groupTask .responsible-back-list-btn,
+.groupTask .responsible-grouptask-complete-btn{
+  position: absolute;
+  top: 12px;
+  right: 68px;
+  font-size: 48px;
+  color: #999;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+}
+.fa-arrow-left{
+  color: #999;
+}
+.myTask .back-list-btn,
+.groupTask .back-list-btn{
+  right: 124px;
+}
+.myTask .mytask-delete-btn,
+.groupTask .grouptask-delete-btn,
+.groupTask .general-back-list-btn,
+.groupTask .responsible-grouptask-complete-btn{
+  right: 12px;
+}
+.myTask .fas:hover,
+.myTask .far:hover,
+.myTask .fa:hover,
+.groupTask .fas:hover,
+.groupTask .far:hover,
+.groupTask .fa:hover{
+  cursor: pointer;
+}
+.myTask label,
+.group label{
+  width: 28%;
+}
+.myTask .deadline-para,
+.groupTask .deadline-para{
+  display: inline-block;
+  width: 28%;
+  margin-top:32px; 
+}
+.myTask label.deadline-label,
+.groupTask label.deadline-label{
+  margin-top: 4px;
+  width: 40px;
+}
+.myTask label.deadline-off-label,
+.groupTask label.deadline-off-label{
+  width: 60%;
+}
+.myTask #date-input,
+.groupTask #date-input{
+  display: none;
+  width: 80%;
+}
+.myTask .ui-datepicker-trigger,
+.groupTask .ui-datepicker-trigger{
+  display: none;
+  position: relative;
+  top: 10px;
+  left: 4px;
+}
+.myTask #priority,
+.groupTask #priority,
+.groupTask #responsible{
+  font-size: 18px;
+  display: block;
+}
+
+/* groupTask */
+.groupTask .task-detail-wrap{
+  width: 62%;
+  margin: 12px auto 24px;
+}
+.groupTask .general-deadline,
+.groupTask .general-responsible{
+  text-align: right;
+  font-size: 18px;
+}
+.general-responsible{
+  margin-top: 4px;
+}
+.groupTask .general-title{
+  margin-top: 24px;
+  font-size: 32px;
+  word-wrap: break-word;
+}
+.groupTask .general-details{
+  margin-top: 12px;
+  font-size: 24px;
+  word-wrap: break-word;
+}
+
+
+/* createGroup */
+.createGroup label{
+  width: 32%;
+}
+.createGroup .file-btn,
+.createGroup button{
+  background-color: #666;
+}
+
+/* group */
+.group-detail-menu-wrap{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom:  64px;
+  min-height: 100px;
+  border-radius: 0 10px 10px 0;
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+  background-color:white; 
+}
+.group-detail-wrap{
+  display: flex;
+  align-items: center;
+  width: 80%;
+  min-height: 100px;
+  font-size: 28px;
+}
+.group-detail-wrap img{
+  display: block;
+  margin-left: 8px;
+  height: 80px;
+  width: 80px;
+  border-radius: 200px;
+  object-fit: cover;
+}
+.group-detail-wrap .group-name-msg-wrap{
+  margin-left: 8px;
+}
+.group-detail-wrap .group-name{
+  padding: 8px 0;
+  font-size: 32px;
+  word-wrap: break-word;
+}
+.group-detail-wrap .group-msg{
+  padding-bottom: 8px;
+  font-size: 20px;
+  word-wrap: break-word;
+}
+.group-menu-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-right: 4px;
+  min-width: 48%;
+}
+.menber-menu{
+  display: flex;
+  justify-content: flex-end;
+}
+.admin-menu{
+  margin-top: 8px;
+}
+
+
+/* joinGroup */
+.joinGroup main img{
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 150px;
+}
+.joinGroup .groupname{
+  margin-top: 12px;
+  text-align: center;
+  word-break: break-all;
+  font-size: 32px;
+}
+.joinGroup .participated-msg,
+.joinGroup .pending-msg{
+  margin-top: 24px;
+  text-align: center;
+  font-size: 32px;
+}
+
+/* pendingUser */
+.pendingUser h2{
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  font-size: 32px;
+  border-bottom: 1px dashed #666;
+}
+.pendingUser .no-user-msg{
+  margin-top: 32px;
+  font-size: 32px;
+  text-align: center;
+}
+
+
+.pendingUser .number-of-users{
+  margin-bottom: 8px;
+  text-align: right;
+  font-size: 18px;
+}
+.pendingUser .user-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.pendingUser .user-list li{
+  margin-bottom: 16px;
+  width: 48%;
+}
+.pendingUser .user-wrap{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  font-size: 28px;
+  border-radius: 0 10px 10px 0;
+  background-color:white; 
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+}
+.pendingUser .user-left-inner{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.pendingUser .user-wrap img{
+  display: block;
+  margin-left: 8px;
+  height: 72px;
+  width: 72px;
+  border-radius: 80px;
+  object-fit: cover;
+}
+.pendingUser .username{
+  margin-left: 8px;
+  max-width: 100%;
+  font-size: 32px;
+}
+.pendingUser .user-right-inner{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.pendingUser .fas,
+.pendingUser .fas{
+  margin: 0 4px 4px 0;
+  font-size: 28px;
+  color: #999;
+}
+.pendingUser .fa-user-plus{
+  margin-right: 12px;
+}
+
+
+/* groupMember */
+.groupMember h2{
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  font-size: 32px;
+  border-bottom: 1px dashed #666;
+}
+.groupMember .no-user-msg{
+  margin-top: 32px;
+  font-size: 32px;
+  text-align: center;
+}
+
+
+.groupMember .number-of-users{
+  margin-bottom: 8px;
+  text-align: right;
+  font-size: 18px;
+}
+.groupMember .user-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.groupMember .user-list li{
+  margin-bottom: 16px;
+  width: 48%;
+}
+.groupMember .user-wrap{
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+  font-size: 28px;
+  border-radius: 0 10px 10px 0;
+  background-color:white; 
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+}
+.groupMember .user-left-inner{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.groupMember .user-wrap img{
+  display: block;
+  margin-left: 8px;
+  height: 72px;
+  width: 72px;
+  border-radius: 80px;
+  object-fit: cover;
+}
+.groupMember .username{
+  margin-left: 8px;
+  max-width: 100%;
+  font-size: 32px;
+}
+.groupMember .user-right-inner{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.groupMember .authority-status{
+  margin: 4px 4px 0 0;
+  font-size: 16px;
+  text-align: right;
+}
+.groupMember .btn-wrap{
+  margin: 0 4px 4px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.groupMember .fas{
+  font-size: 28px;
+  color: #999;
+}
+.groupMember .fa-user-cog{
+  margin-right: 12px;
+}
+
+/* chat */
+.chat .like-memo-container{
+  position: relative;
+  height: 800px;
+}
+.chat .back-btn,
+.chat .reload-btn{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 48px;
+  color: #999;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+}
+.chat .back-btn{
+  right: 72px;
+}
+.chat .reload-btn i{
+  color: #999;
+}
+.chat .msg-area{
+  margin: 0 auto 16px;
+  height: 90%;
+  width: 90%;
+  overflow-y: scroll;
+}
+.chat .msg-wrap{
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+.chat .msg-wrap:not(:last-of-type){
+  margin-bottom: 40px;
+}
+.chat .msg{
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  word-break: break-all;
+}
+
+.chat .right-msg{
+  justify-content: flex-end;
+  margin-right: 8px;
+}
+.right-baloon {
+  position: relative;
+  display: inline-block;
+  margin-right: 16px;
+  padding: 7px 10px;
+  width: 80%;
+  color: #999;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 1px #999;
+  border-radius: 8px;
+}
+
+.right-baloon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -14px;
+  margin-top: -7px;
+  border: 7px solid transparent;
+  border-left: 7px solid #FFF;
+  z-index: 2;
+}
+
+.right-baloon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -15px;
+  margin-top: -7px;
+  border: 7px solid transparent;
+  border-left: 7px solid #999;
+  z-index: 1;
+}
+
+.chat .left-msg{
+  justify-content: flex-start;
+  margin-left: 8px;
+}
+.left-baloon {
+  position: relative;
+  display: inline-block;
+  margin-left: 16px;
+  padding: 7px 10px;
+  width: 80%;
+  color: #999;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 1px #999;
+  border-radius: 8px;
+}
+
+.left-baloon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -14px;
+  margin-top: -7px;
+  border: 7px solid transparent;
+  border-right: 7px solid #FFF;
+  z-index: 2;
+}
+
+.left-baloon:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  margin-top: -7px;
+  border: 7px solid transparent;
+  border-right: 7px solid #999;
+  z-index: 1;
+}
+
+.chat .msg-wrap .post-date{
+  position: absolute;
+  right: 0px;
+  top: -17px;
+}
+
+.chat .user-info{
+  position: relative;
+}
+.chat .post-date{
+  position: absolute;
+  top: -16px;
+}
+.chat .user-info .user-name{
+  position: absolute;
+  top: -16px;
+}
+.chat .msg-area img{
+  height: 80px;
+  width: 80px;
+  border-radius: 100px;
+}
+
+.chat .like-memo-container form{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+}
+.chat textarea{
+  display: inline-block;
+  width: 80%;
+  height: 8%;
+}
+.chat button{
+  display: inline-block;
+  width: 16%;
+  margin: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+  border-radius: 6px;
+  font-size: 24px;
+}
+
+/* モーダル */
+.modal-wrap{
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+.modal-bg{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0,0,0,0.3);
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 44%;
+  margin: 0;
+  padding: 56px 0 32px;
+  border-radius: 0 10px 10px 0;
+  background: #fff;
+  box-shadow:1px 1px 4px 0 #b2b2b2;
+}
+
+.modal .fa-times{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 40px;
+}
+.modal .fa-times:hover{
+  cursor: pointer;
+}
+
+.myTaskList #add-task-modal label,
+.group #add-task-modal label{
+  display: inline-block;
+  width: 28%;
+}
+.myTaskList #add-task-modal .deadline-para,
+.group #add-task-modal .deadline-para{
+  display: inline-block;
+  width: 28%;
+  margin-top:32px; 
+}
+.myTaskList #add-task-modal .deadline-label,
+.group #add-task-modal .deadline-label{
+  margin-top: 4px;
+  width: 40px;
+}
+.myTaskList #add-task-modal .deadline-off-label,
+.group #add-task-modal .deadline-off-label{
+  width: 60%;
+}
+.myTaskList #date-input,
+.group #date-input{
+  display: none;
+  width: 80%;
+}
+.myTaskList .ui-datepicker-trigger,
+.group .ui-datepicker-trigger{
+  display: none;
+  position: relative;
+  top: 10px;
+  left: 4px;
+}
+.myTaskList #priority,
+.group #priority{
+  font-size: 18px;
+}
+/* 削除モーダル */
+.myTaskList #delete-task-modal .delete-task-title,
+.group #delete-task-modal .delete-task-title{
+  margin-top: 24px;
+  font-size: 32px;
+  word-wrap: break-word;
+}
+.myTaskList #delete-task-modal .delete-task-detail,
+.group #delete-task-modal .delete-task-detail{
+  margin-top: 12px;
+  font-size: 24px;
+  word-wrap: break-word;
+}
+.myTaskList #delete-task-modal  .delete-task-deadline,
+.group #delete-task-modal .delete-task-deadline,
+.group #delete-task-modal .delete-task-responsible{
+  text-align: right;
+  font-size: 18px;
+}
+.myTaskList #batch-deletion-modal p,
+.myTask #delete-task-modal{
+  font-size: 24px;
+  text-align: center;
+}
+
+/* グループ参加承認モーダル */
+.pendingUser .modal img{
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 150px;
+}
+.pendingUser .modal-username{
+  margin-top: 12px;
+  text-align: center;
+  font-size: 32px;
+}
+.pendingUser .confirm-msg{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 32px;
+}
+.pendingUser .modal button{
+  margin: 12px 0 32px;
+}
+
+/* メンバー設定モーダル */
+.groupMember .modal img{
+  display: block;
+  margin: 0 auto;
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 150px;
+}
+.groupMember .modal-username{
+  margin-top: 12px;
+  text-align: center;
+  font-size: 32px;
+}
+.groupMember .modal label{
+  display: inline-block;
+  margin-top: 24px;
+}
+.groupMember .modal .description-msg{
+  margin-top: 4px;
+}
+.groupMember .modal select{
+  font-size: 18px;
+}
+.groupMember .confirm-msg{
+  margin-top: 40px;
+  text-align: center;
+  font-size: 32px;
+}
+.groupMember .modal button{
+  margin: 12px 0 32px;
+}
+
+.group .modal select{
+  display: block;
+  font-size: 18px;
+}
+
+/* アニメーション */
+@keyframes slideRight240{
+  100%{
+    right: -240px;
+  }
+}
+@keyframes slideRight260{
+  100%{
+    right: -260px;
+  }
+}
+@keyframes slideRight280{
+  100%{
+    right: -280px;
+  }
+}
+@keyframes slideRight300{
+  100%{
+    right: -300px;
+  }
+}
+@keyframes slideRight320{
+  100%{
+    right: -320px;
+  }
+}
+@keyframes slideRight340{
+  100%{
+    right: -340px;
+  }
+}
+@keyframes slideRight360{
+  100%{
+    right: -360px;
+  }
+}
+.profileEdit .like-memo-container,
+.emailEdit .like-memo-container,
+.passEdit .like-memo-container,
+.myTaskList .msg-wrap,
+.group .msg-wrap,
+.myTask .like-memo-container,
+.groupEdit .like-memo-container,
+.pendingUser .msg-wrap,
+.groupMember .msg-wrap{
+  position: relative;
+  overflow: hidden;
+}
+.myTaskList .msg-wrap,
+.group .msg-wrap,
+.pendingUser .msg-wrap,
+.groupMember .msg-wrap,
+.groupTaskList .msg-wrap{
+  height: 68px;
+}
+#slide-msg{
+  position: absolute;
+  top: 24px;
+  right: 0;
+  padding: 8px 8px;
+  color: white;
+  text-shadow: 0px 0px 1px rgb(175, 175, 175);
+  border: none;
+  border-radius:6px 0 0 6px;
+  font-size: 24px;
+  outline: none;
+}
+.myTask #slide-msg{
+  top:62px;
+}
+.profileEdit #slide-msg{
+  animation: slideRight340 1s 1s forwards ease-in;
+}
+.emailEdit #slide-msg,
+.passEdit #slide-msg{
+  animation: slideRight360 1s 1s forwards ease-in;
+}
+.myTaskList #slide-msg,
+.groupEdit #slide-msg,
+.group #slide-msg{
+  animation: slideRight260 1s 1s forwards ease-in;
+}
+.myTask #slide-msg{
+  animation: slideRight260 1s 1s forwards ease-in;
+}
+.groupEdit #slide-msg{
+  animation: slideRight340 1s 1s forwards ease-in;
+}
+.groupMember #slide-msg{
+
+  animation: slideRight280 1s 1s forwards ease-in;
+}
+
+/*  優先度ボーダー(3色) */
+.blue-border{
+  border-left: 30px #68CFC3 solid;
+}
+.yellow-border{
+  border-left: 30px #FBE481 solid;
+}
+.red-border{
+  border-left: 30px #E38692 solid;
+}
+/*  優先度背景色(3色) */
+.blue-bg{
+  background: #68CFC3;
+}
+.yellow-bg{
+  background: #FBE481;
+}
+.red-bg{
+  background: #E38692;
+}
+
+.success-color::before{
+  color: rgb(26, 212, 172);
+}
